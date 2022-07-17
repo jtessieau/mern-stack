@@ -1,0 +1,18 @@
+{
+  "name": "mern-stack",
+  "version": "0.0.1",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "serve": "nodemon backend/server.js"
+  }
+}
