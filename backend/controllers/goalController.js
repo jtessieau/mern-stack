@@ -29,15 +29,13 @@ const updateGoal = asyncHandler(async (req, res) => {
         throw new Error('Goal not found')
     }
 
-    const user = User.findById(req.user.id)
-
     // check for user
-    if (!user) {
+    if (!req.user) {
         res.status(401)
         throw new Error('User not found')
     }
 
-    if (goal.user.id.toString() !== user.id) {
+    if (goal.user.id.toString() !== req.user.id) {
         res.status(401)
         throw new Error('User not authorized')
     }
